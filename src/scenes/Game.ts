@@ -1,4 +1,3 @@
-import AnimationKeys from "../consts/AnimationKeys";
 import SceneKeys from "../consts/SceneKeys";
 import TextureKeys from "../consts/TextureKeys";
 import LaserObstacle from "../game/LaserObstacle";
@@ -123,7 +122,7 @@ export default class Game extends Phaser.Scene{
             padding: {left: 15, right: 15, top: 10, bottom: 10}
         }).setScrollFactor(0)
     }
-    update(t: number, dt: number){
+    update(){
         this.wrapMouseHole()
         this.wrapWindows()
         this.wrapBookcases()
@@ -170,6 +169,7 @@ export default class Game extends Phaser.Scene{
         obj1: Phaser.GameObjects.GameObject,
         obj2: Phaser.GameObjects.GameObject
     ){
+        console.log(obj1)
         const coin = obj2 as Phaser.Physics.Arcade.Sprite;
 
         this.coins.killAndHide(coin);
@@ -212,10 +212,7 @@ export default class Game extends Phaser.Scene{
             
         }
     }
-    private handleOverlapLaser(
-        obj1: Phaser.GameObjects.GameObject,
-        obj2: Phaser.GameObjects.GameObject
-    ){
+    private handleOverlapLaser(){
         console.log("overlap!")
         this.mouse.kill()
     }
