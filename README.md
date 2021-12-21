@@ -52,6 +52,7 @@ The following tools were used in this project:
 
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Phaser](https://phaser.io/)
 
 ## :white_check_mark: Requirements ##
 
